@@ -1,0 +1,103 @@
+@import "compass/reset";
+@import "compass/css3";
+
+$teal: #2ABABB;
+$coral:#E14943;
+$lightCoral:#FD938F;
+$kindaBlack: #2E3036;
+
+body,html {
+    height:100%;
+    overflow:hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#sec-container {
+
+    // common
+    &,
+    .secs {
+        position:relative;
+        height:100%;
+    }
+
+    // nav
+    #sec-nav {
+        list-style:none;
+        position:absolute;
+        right:20px;
+        top:50%;
+        margin-top:-50px;
+        height:100px;
+        z-index:2;
+        li {
+            height:50px;
+            line-height:50px;
+            text-align:right;
+            display:block;
+            a,
+            a:hover,
+            a:visited {
+                color:white;
+                font-weight:bold;
+                text-decoration:none;
+            }
+        }
+    }
+
+    // sections
+    .sec {
+        height:100%;
+        position:relative;
+    }
+
+    .vc {
+        @include transform(translateY(-50%));
+        position:absolute;
+        left:0;
+        top:50%;
+    }
+
+    .sec-inner {
+        background-color:rgba(255,255,255, 0.1);
+        width:70%;
+        padding:50px;
+    }
+
+    #splash {
+
+        h1 {
+            color:$lightCoral;
+        }
+
+        h1,h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size:65px;
+            margin-left:20px;
+        }
+
+        .banner {
+            margin-top:10px;
+            background-color:rgba(0,0,0, 0.3);
+            padding:20px;
+        }
+
+        background-color:$teal;
+        color:white;
+    }
+
+    .hd {
+        font-family: 'Montserrat', sans-serif;
+        font-size:50px;
+    }
+
+    .bd {
+        font-size:18px;
+        font-weight:100;
+    }
+
+    #about-me {
+        background-color:$coral;
+        color:white;
+    }
+}

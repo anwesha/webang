@@ -1,0 +1,136 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#sec-container,
+#sec-container .secs {
+  position: relative;
+  height: 100%;
+}
+#sec-container #sec-nav {
+  list-style: none;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -50px;
+  height: 100px;
+  z-index: 2;
+}
+#sec-container #sec-nav li {
+  height: 50px;
+  line-height: 50px;
+  text-align: right;
+  display: block;
+}
+#sec-container #sec-nav li a,
+#sec-container #sec-nav li a:hover,
+#sec-container #sec-nav li a:visited {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+#sec-container .sec {
+  height: 100%;
+  position: relative;
+}
+#sec-container .vc {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+#sec-container .sec-inner {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 70%;
+  padding: 50px;
+}
+#sec-container #splash {
+  background-color: #2ABABB;
+  color: white;
+}
+#sec-container #splash h1 {
+  color: #FD938F;
+}
+#sec-container #splash h1, #sec-container #splash h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 65px;
+  margin-left: 20px;
+}
+#sec-container #splash .banner {
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+#sec-container .hd {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+}
+#sec-container .bd {
+  font-size: 18px;
+  font-weight: 100;
+}
+#sec-container #about-me {
+  background-color: #E14943;
+  color: white;
+}
