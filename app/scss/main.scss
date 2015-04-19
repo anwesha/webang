@@ -1,10 +1,22 @@
 @import "compass/reset";
 @import "compass/css3";
 
+// Global Vars
 $teal: #2ABABB;
 $coral:#E14943;
 $lightCoral:#FD938F;
 $kindaBlack: #2E3036;
+$kindaGrey: #5A6071;
+$kindaGreen: #51CAA0;
+
+$hdrFF: 'Montserrat', sans-serif;
+
+@import "_splash.scss";
+@import "_about-me.scss";
+@import "_work.scss";
+@import "_education.scss";
+@import "_skills.scss";
+
 
 body,html {
     height:100%;
@@ -15,6 +27,12 @@ body,html {
 #sec-container {
 
     // common
+    [data-sec="splash"] { background-color:$teal; }
+    [data-sec="about-me"] { background-color:$coral; }
+    [data-sec="work"] { background-color:$kindaBlack; }
+    [data-sec="education"] { background-color:$kindaGrey; }
+    [data-sec="skills"] { background-color:$kindaGreen; }
+
     &,
     .secs {
         position:relative;
@@ -25,23 +43,35 @@ body,html {
     #sec-nav {
         list-style:none;
         position:absolute;
-        right:20px;
+        left:20px;
         top:50%;
-        margin-top:-50px;
-        height:100px;
+        margin-top:(-30px * 5)/2;
         z-index:2;
         li {
-            height:50px;
-            line-height:50px;
-            text-align:right;
             display:block;
+            font-size:0;
+            p {
+                display:inline-block;
+                visibility:hidden;
+                font-size:13px;
+                margin-left:5px;
+                vertical-align:middle;
+                color:#ececec;
+            }
+
+            a {
+                display:inline-block;
+                vertical-align:middle;
+                width:25px;
+                height:30px;
+            }
             a,
             a:hover,
             a:visited {
-                color:white;
-                font-weight:bold;
                 text-decoration:none;
             }
+
+            &:hover p {visibility:visible; }
         }
     }
 
@@ -54,41 +84,22 @@ body,html {
     .vc {
         @include transform(translateY(-50%));
         position:absolute;
-        left:0;
+        right:0;
         top:50%;
     }
 
     .sec-inner {
-        background-color:rgba(255,255,255, 0.1);
         width:70%;
         padding:50px;
+        background-color: rgba(0, 0, 0, 0.05);
     }
 
-    #splash {
 
-        h1 {
-            color:$lightCoral;
-        }
-
-        h1,h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size:65px;
-            margin-left:20px;
-        }
-
-        .banner {
-            margin-top:10px;
-            background-color:rgba(0,0,0, 0.3);
-            padding:20px;
-        }
-
-        background-color:$teal;
-        color:white;
-    }
-
+    // common sections
     .hd {
-        font-family: 'Montserrat', sans-serif;
+        font-family: $hdrFF;
         font-size:50px;
+        margin-bottom:40px;
     }
 
     .bd {
@@ -96,8 +107,17 @@ body,html {
         font-weight:100;
     }
 
-    #about-me {
-        background-color:$coral;
-        color:white;
+    .timeline {
+        color:#ccc;
+        font-size:15px;
+        display:inline-block;
+        letter-spacing: 0.02em;
     }
+
+
+    @include splash();
+    @include aboutMe();
+    @include work();
+    @include education();
+    @include skills();
 }

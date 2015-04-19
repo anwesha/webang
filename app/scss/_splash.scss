@@ -1,0 +1,25 @@
+@mixin splash () {
+    #splash {
+
+        font-family: $hdrFF;
+        h1 { color:$lightCoral;}
+        h2 { margin-left:-6px; } // hacky i know
+
+        h1,h2 {
+            font-size:80px;
+            line-height:65px;
+            margin-right:40px;
+        }
+
+        .banner {
+            font-size:15px;
+            line-height:18px;
+            margin-top:20px;
+            background-color:rgba(0,0,0, 0.3);
+            padding:20px;
+        }
+
+        background-color:$teal;
+        color:white;
+    }
+}

@@ -1,0 +1,13 @@
+<div id="skills" class="sec" data-sec="skills">
+    <div class="sec-inner vc">
+        <h3 class="hd">{{secData.header}}</h3>
+        <div class="bd">
+            <ul class="tech-skills">
+                <li ng-repeat="skill in secData.body.technical">{{skill}}</li>
+            </ul>
+            <ul class="other-skills">
+                <li ng-repeat="skill in secData.body.others">{{skill}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -16,13 +16,32 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
 </head>
 
     <body>
         <div id="sec-container">
             <ul id="sec-nav">
-                <li><a href="#/splash">home</a></li>
-                <li><a href="#/about-me">about me</a></li>
+                <li>
+                    <a href="#/splash" data-sec="splash"></a>
+                    <p>home</p>
+                </li>
+                <li>
+                    <a href="#/about-me" data-sec="about-me"></a>
+                    <p>about me</p>
+                </li>
+                <li>
+                    <a href="#/work" data-sec="work"></a>
+                    <p>work experience</p>
+                </li>
+                <li>
+                    <a href="#/education" data-sec="education"></a>
+                    <p>education</p>
+                </li>
+                <li>
+                    <a href="#/skills" data-sec="skills"></a>
+                    <p>skills</p>
+                </li>
             </ul>
             <div ng-view class="secs"></div>
         </div>

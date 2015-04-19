@@ -1,0 +1,17 @@
+@mixin skills () {
+    #skills {
+        background-color:$kindaGreen;
+        color:white;
+
+        .tech-skills,
+        .other-skills {
+            display:inline-block;
+            min-width:200px;
+            vertical-align:top;
+            li {
+                display:block;
+                margin-bottom:5px;
+            }
+        }
+    }
+}

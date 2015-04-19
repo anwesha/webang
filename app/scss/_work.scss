@@ -1,0 +1,52 @@
+@mixin work () {
+    #work {
+        background-color:$kindaBlack;
+        color:white;
+
+        .company {
+            display:inline-block;
+            width:50%;
+            vertical-align:top;
+        }
+
+        .company .name {
+            font-family:$hdrFF;
+            font-size:20px;
+            margin-bottom:10px;
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        .location {
+            display:inline-block;
+            font-size:13px;
+            padding:0 5px;
+            color:#ccc;
+            vertical-align: text-bottom;
+        }
+
+        .title-time,
+        .work-point { margin-bottom: 5px; }
+        .work { margin-bottom: 10px; }
+        .title {
+            font-weight:600;
+        }
+
+        .team {
+            color:#746CF9;
+            font-family:$hdrFF;
+            font-size:15px;
+            margin-right:5px;
+        }
+
+        .work-points {
+            max-height:120px;
+            overflow:hidden;
+        }
+
+        .work-points.hidden {
+            max-height:0;
+            @include transition (max-height, 0.32s, ease);
+        }
+    }
+}
