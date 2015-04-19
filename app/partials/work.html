@@ -1,0 +1,25 @@
+<div id="work" class="sec" data-sec="work">
+    <div class="sec-inner vc">
+        <h3 class="hd">{{secData.header}}</h3>
+        <div class="bd">
+            <div class="company" ng-repeat="company in secData.body">
+                <div class="company-hd">
+                    <p class="name" style="background-color:{{company.color}};">
+                        {{company.name}}
+                    </p>
+                    <p class="location">{{company.location}}</p>
+                </div>
+                <div class="work" ng-repeat="work in company.details">
+                    <div class="title-time">
+                        <p class="title">{{work.title}}</p>
+                        <span class="team" ng-if="work.team !== undefined">{{work.team}}</span>
+                        <span class="timeline">{{work.timeline}}</span>
+                    </div>
+                    <ul class="work-points hidden">
+                        <li class="work-point" ng-repeat="point in work.desc">{{point}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

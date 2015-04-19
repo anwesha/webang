@@ -3,19 +3,18 @@
 /* App Module */
 var debApp = angular.module("debApp", [
     "ngRoute",
-    "debAppControllers"
+    "debAppControllers",
+    "debAppServices"
 ]);
 
-debApp.config(["$routeProvider",
+debApp.config(["$routeProvider", "$locationProvider",
 function ($routeProvider) {
     $routeProvider.
-    when("/splash", {
-        templateUrl: "partials/splash.html",
-        controller : "SplashCtrl"
-    }).
-    when("/about-me",{
-        templateUrl: "partials/about-me.html",
-        controller : "AboutMeCtrl"
+    when("/:secId",{
+        templateUrl: function (params) {
+            return "partials/" + params.secId + ".html";
+        },
+        controller : "SectionCtrl"
     }).
     otherwise({
         redirectTo: "/splash"

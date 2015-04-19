@@ -1,0 +1,13 @@
+<div id="education" class="sec" data-sec="education">
+    <div class="sec-inner vc">
+        <h3 class="hd">{{secData.header}}</h3>
+        <div class="bd">
+            <div class="college" ng-repeat="college in secData.body">
+                <p class="name">{{college.name}}</p>
+                <p class="degree">{{college.degree}}, </p>
+                <p class="location">{{college.location}}</p>
+                <p class="timeline">{{college.graduation}}</p>
+            </div>
+        </div>
+    </div>
+</div>

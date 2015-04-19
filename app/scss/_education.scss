@@ -1,0 +1,22 @@
+@mixin education () {
+    #education {
+        background-color:$kindaGrey;
+        color: white;
+
+        .college {
+            margin-bottom:15px;
+
+            .name {
+                font-family:$hdrFF;
+                font-size:20px;
+                margin-bottom:5px;
+                color:#111;
+            }
+
+            .degree { font-weight:400; }
+            .degree, .location {
+                display:inline-block;
+            }
+        }
+    }
+}

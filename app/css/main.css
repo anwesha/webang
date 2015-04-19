@@ -60,6 +60,21 @@ body, html {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+#sec-container [data-sec="splash"] {
+  background-color: #2ABABB;
+}
+#sec-container [data-sec="about-me"] {
+  background-color: #E14943;
+}
+#sec-container [data-sec="work"] {
+  background-color: #2E3036;
+}
+#sec-container [data-sec="education"] {
+  background-color: #5A6071;
+}
+#sec-container [data-sec="skills"] {
+  background-color: #51CAA0;
+}
 #sec-container,
 #sec-container .secs {
   position: relative;
@@ -68,24 +83,36 @@ body, html {
 #sec-container #sec-nav {
   list-style: none;
   position: absolute;
-  right: 20px;
+  left: 20px;
   top: 50%;
-  margin-top: -50px;
-  height: 100px;
+  margin-top: -75px;
   z-index: 2;
 }
 #sec-container #sec-nav li {
-  height: 50px;
-  line-height: 50px;
-  text-align: right;
   display: block;
+  font-size: 0;
+}
+#sec-container #sec-nav li p {
+  display: inline-block;
+  visibility: hidden;
+  font-size: 13px;
+  margin-left: 5px;
+  vertical-align: middle;
+  color: #ececec;
+}
+#sec-container #sec-nav li a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 30px;
 }
 #sec-container #sec-nav li a,
 #sec-container #sec-nav li a:hover,
 #sec-container #sec-nav li a:visited {
-  color: white;
-  font-weight: bold;
   text-decoration: none;
+}
+#sec-container #sec-nav li:hover p {
+  visibility: visible;
 }
 #sec-container .sec {
   height: 100%;
@@ -97,40 +124,137 @@ body, html {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   position: absolute;
-  left: 0;
+  right: 0;
   top: 50%;
 }
 #sec-container .sec-inner {
-  background-color: rgba(255, 255, 255, 0.1);
   width: 70%;
   padding: 50px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#sec-container .hd {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+#sec-container .bd {
+  font-size: 18px;
+  font-weight: 100;
+}
+#sec-container .timeline {
+  color: #ccc;
+  font-size: 15px;
+  display: inline-block;
+  letter-spacing: 0.02em;
 }
 #sec-container #splash {
+  font-family: "Montserrat", sans-serif;
   background-color: #2ABABB;
   color: white;
 }
 #sec-container #splash h1 {
   color: #FD938F;
 }
+#sec-container #splash h2 {
+  margin-left: -6px;
+}
 #sec-container #splash h1, #sec-container #splash h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 65px;
-  margin-left: 20px;
+  font-size: 80px;
+  line-height: 65px;
+  margin-right: 40px;
 }
 #sec-container #splash .banner {
-  margin-top: 10px;
+  font-size: 15px;
+  line-height: 18px;
+  margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 20px;
-}
-#sec-container .hd {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 50px;
-}
-#sec-container .bd {
-  font-size: 18px;
-  font-weight: 100;
 }
 #sec-container #about-me {
   background-color: #E14943;
   color: white;
+}
+#sec-container #work {
+  background-color: #2E3036;
+  color: white;
+}
+#sec-container #work .company {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+#sec-container #work .company .name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+}
+#sec-container #work .location {
+  display: inline-block;
+  font-size: 13px;
+  padding: 0 5px;
+  color: #ccc;
+  vertical-align: text-bottom;
+}
+#sec-container #work .title-time,
+#sec-container #work .work-point {
+  margin-bottom: 5px;
+}
+#sec-container #work .work {
+  margin-bottom: 10px;
+}
+#sec-container #work .title {
+  font-weight: 600;
+}
+#sec-container #work .team {
+  color: #746CF9;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  margin-right: 5px;
+}
+#sec-container #work .work-points {
+  max-height: 120px;
+  overflow: hidden;
+}
+#sec-container #work .work-points.hidden {
+  max-height: 0;
+  -moz-transition: max-height, 0.32s, ease;
+  -o-transition: max-height, 0.32s, ease;
+  -webkit-transition: max-height, 0.32s, ease;
+  transition: max-height, 0.32s, ease;
+}
+#sec-container #education {
+  background-color: #5A6071;
+  color: white;
+}
+#sec-container #education .college {
+  margin-bottom: 15px;
+}
+#sec-container #education .college .name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #111;
+}
+#sec-container #education .college .degree {
+  font-weight: 400;
+}
+#sec-container #education .college .degree, #sec-container #education .college .location {
+  display: inline-block;
+}
+#sec-container #skills {
+  background-color: #51CAA0;
+  color: white;
+}
+#sec-container #skills .tech-skills,
+#sec-container #skills .other-skills {
+  display: inline-block;
+  min-width: 200px;
+  vertical-align: top;
+}
+#sec-container #skills .tech-skills li,
+#sec-container #skills .other-skills li {
+  display: block;
+  margin-bottom: 5px;
 }
