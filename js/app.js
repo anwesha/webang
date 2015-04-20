@@ -8,7 +8,7 @@ var debApp = angular.module("debApp", [
 ]);
 
 debApp.config(["$routeProvider", "$locationProvider",
-function ($routeProvider) {
+function ($routeProvider, $locationProvider) {
     $routeProvider.
     when("/:secId",{
         templateUrl: function (params) {
@@ -19,5 +19,12 @@ function ($routeProvider) {
     otherwise({
         redirectTo: "/splash"
     });
+
+    //check browser support
+    if(window.history && window.history.pushState) {
+     $locationProvider.html5Mode({
+             enabled: true
+      });
+    }
 }
 ]);
