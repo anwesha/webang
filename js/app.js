@@ -3,6 +3,7 @@
 /* App Module */
 var debApp = angular.module("debApp", [
     "ngRoute",
+    "ngAnimate",
     "debAppControllers",
     "debAppServices"
 ]);

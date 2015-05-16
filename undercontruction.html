@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <base href="/index.html">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anwesha Deb</title>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Raleway:400,100' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="webang/images/favicon.png" />
+</head>
+<style type="text/css">
+    html {
+        width:100%;
+        height:100%;
+    }
+
+    body {
+        position:relative;
+        padding:0;
+        margin:0;
+    }
+
+    .outer-wrap {
+        background-color: rgba(42, 6, 52, 1);
+        position:fixed;
+        background-image:url("webang/images/rome.jpg");
+        background-size:cover;
+    }
+
+    .overlay {
+        position:absolute;
+        background-color: rgba(42, 6, 52, 0.7);
+    }
+
+    .outer-wrap, .overlay {
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+    }
+
+    .message {
+        font-family: 'Raleway', sans-serif;
+        color: #FAFAFA;
+        text-align: center;
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        width: 100%;
+    }
+
+    strong { font-weight: 400; }
+    .quirky-message {
+        font-size: 30px;
+        font-weight: 100;
+        padding: 0 40px;
+        margin-bottom: 0;
+        line-height: 35px;
+    }
+
+    .connect p {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+    ul { margin:0; padding: 0;}
+    .btn::before,.btn::after {
+        content: '';
+    }
+
+    .btn {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        vertical-align: top;
+    }
+
+    .linkedin { background-image: url("webang/images/linkedin_color.svg"); }
+    .tumblr { background-image: url("webang/images/tumblr_color.svg"); }
+    .flickr {
+        background-image: url("webang/images/flickr_color.svg");
+        background-size: 85%;
+        background-position: center;
+    }
+    .download {
+        background-image: url("webang/images/download.svg");
+        background-color: #09BD86;
+        border-radius: 100%;
+        background-size: 69%;
+        width: 44px;
+        height: 44px;
+        background-position: 48% 50%;
+        margin: 3px 0 0 3px;
+    }
+
+</style>
+<body>
+    <div class="outer-wrap">
+        <div class="overlay">
+            <div class="message">
+                <p class="quirky-message"><strong>Rome</strong> wasn't built in a day!</p>
+                <div class="connect">
+                    <p>know more about me at</p>
+                    <ul>
+                        <a href="https://www.linkedin.com/pub/anwesha-deb/13/b62/4b" target="_blank" class="btn linkedin"></a>
+                        <a href="https://www.flickr.com/photos/anweshadeb" target="_blank" class="btn flickr"></a>
+                        <a href="http://anweshadebpictures.tumblr.com/" target="_blank" class="btn tumblr"></a>
+                        <a href="/webang/anwesha_deb.pdf" download="anwesha_deb.pdf" class="btn download"></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

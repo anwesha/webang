@@ -258,3 +258,28 @@ body, html {
   display: block;
   margin-bottom: 5px;
 }
+#sec-container .view-animate-container {
+  position: relative;
+  height: 100% !important;
+  overflow: hidden;
+}
+#sec-container .view-animate.ng-enter, #sec-container .view-animate.ng-leave {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#sec-container .view-animate.ng-enter {
+  top: -100%;
+}
+#sec-container .view-animate.ng-enter.ng-enter-active {
+  top: 0;
+}
+#sec-container .view-animate.ng-leave.ng-leave-active {
+  top: 100%;
+}
