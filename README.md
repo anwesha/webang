@@ -1,2 +1,4 @@
-# webang <deprecated>
-website on angular!
+# webang
+```
+deprecated : see : https://github.com/anwesha/simplesite
+```
